@@ -72,6 +72,69 @@ proxy-groups:
       - Cloady-xray
       - DIRECT
 rules:
+  - PROCESS-NAME,com.tencent.mm,DIRECT
+  - PROCESS-NAME,com.eg.android.AlipayGphone,DIRECT
+  - PROCESS-NAME,com.tencent.mobileqq,DIRECT
+  - PROCESS-NAME,com.taobao.taobao,DIRECT
+  - PROCESS-NAME,com.tmall.wireless,DIRECT
+  - PROCESS-NAME,com.jingdong.app.mall,DIRECT
+  - PROCESS-NAME,com.xunmeng.pinduoduo,DIRECT
+  - PROCESS-NAME,com.ss.android.ugc.aweme,DIRECT
+  - PROCESS-NAME,tv.danmaku.bili,DIRECT
+  - PROCESS-NAME,com.smile.gifmaker,DIRECT
+  - PROCESS-NAME,com.sina.weibo,DIRECT
+  - PROCESS-NAME,com.zhihu.android,DIRECT
+  - PROCESS-NAME,com.xingin.xhs,DIRECT
+  - PROCESS-NAME,com.autonavi.minimap,DIRECT
+  - PROCESS-NAME,com.baidu.BaiduMap,DIRECT
+  - PROCESS-NAME,com.MobileTicket,DIRECT
+  - PROCESS-NAME,com.sankuai.meituan,DIRECT
+  - PROCESS-NAME,com.sdu.didi.psnger,DIRECT
+  - PROCESS-NAME,com.icbc,DIRECT
+  - PROCESS-NAME,com.chinamworld.main,DIRECT
+  - PROCESS-NAME,com.ccb,DIRECT
+  - PROCESS-NAME,com.cmbchina.ccd,DIRECT
+  - PROCESS-NAME,com.abchina,DIRECT
+  - PROCESS-NAME,com.bankcomm,DIRECT
+  - PROCESS-NAME,com.unionpay,DIRECT
+  - DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+  - DOMAIN-SUFFIX,wx.qq.com,DIRECT
+  - DOMAIN-SUFFIX,wechat.com,DIRECT
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,alipay.com,DIRECT
+  - DOMAIN-SUFFIX,alipay.cn,DIRECT
+  - DOMAIN-SUFFIX,alipayobjects.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,tmall.com,DIRECT
+  - DOMAIN-SUFFIX,alicdn.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+  - DOMAIN-SUFFIX,jd.hk,DIRECT
+  - DOMAIN-SUFFIX,360buyimg.com,DIRECT
+  - DOMAIN-SUFFIX,pinduoduo.com,DIRECT
+  - DOMAIN-SUFFIX,douyin.com,DIRECT
+  - DOMAIN-SUFFIX,douyincdn.com,DIRECT
+  - DOMAIN-SUFFIX,iesdouyin.com,DIRECT
+  - DOMAIN-SUFFIX,bytedance.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.tv,DIRECT
+  - DOMAIN-SUFFIX,hdslb.com,DIRECT
+  - DOMAIN-SUFFIX,kuaishou.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.cn,DIRECT
+  - DOMAIN-SUFFIX,zhihu.com,DIRECT
+  - DOMAIN-SUFFIX,xiaohongshu.com,DIRECT
+  - DOMAIN-SUFFIX,xhslink.com,DIRECT
+  - DOMAIN-SUFFIX,amap.com,DIRECT
+  - DOMAIN-SUFFIX,autonavi.com,DIRECT
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-SUFFIX,12306.cn,DIRECT
+  - DOMAIN-SUFFIX,meituan.com,DIRECT
+  - DOMAIN-SUFFIX,meituan.net,DIRECT
+  - DOMAIN-SUFFIX,dianping.com,DIRECT
+  - DOMAIN-SUFFIX,didi.cn,DIRECT
+  - DOMAIN-SUFFIX,sina.com.cn,DIRECT
+  - DOMAIN-SUFFIX,163.com,DIRECT
+  - DOMAIN-SUFFIX,126.com,DIRECT
   - DOMAIN-SUFFIX,openai.com,AI服务
   - DOMAIN-SUFFIX,chatgpt.com,AI服务
   - DOMAIN-SUFFIX,oaistatic.com,AI服务
@@ -104,4 +167,5 @@ rules:
   - DOMAIN-SUFFIX,amazonvideo.com,流媒体
   - GEOIP,CN,DIRECT
   - GEOSITE,CN,DIRECT
+  - GEOIP,private,DIRECT
   - MATCH,手动选择
