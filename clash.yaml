@@ -19,7 +19,6 @@ proxies:
       path: /vless
       headers:
         Host: rak.zhoumeiwen.com
-    fingerprint: chrome
     udp: true
 proxy-groups:
   - name: PROXY
