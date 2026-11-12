@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - name: 美国-圣何塞-10TB
+  - name: 美国-圣何塞-10TB RAKsmart-SV
     type: vless
     server: rak.zhoumeiwen.com
     port: 443
@@ -20,7 +20,7 @@ proxies:
       headers:
         Host: rak.zhoumeiwen.com
     udp: true
-  - name: 美国-西雅图-15GB
+  - name: 美国-西雅图-15GB Cloady-xray
     type: vless
     server: xray-t7ir3xbn-workspace-dw3xvd.cloady.io
     port: 443
@@ -39,8 +39,8 @@ proxy-groups:
   - name: 手动选择
     type: select
     proxies:
-      - 美国-圣何塞-10TB
-      - 美国-西雅图-15GB
+      - 美国-圣何塞-10TB RAKsmart-SV
+      - 美国-西雅图-15GB Cloady-xray
       - DIRECT
       - 自动选择
       - 故障转移
@@ -50,33 +50,33 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 美国-圣何塞-10TB
-      - 美国-西雅图-15GB
+      - 美国-圣何塞-10TB RAKsmart-SV
+      - 美国-西雅图-15GB Cloady-xray
   - name: 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 美国-圣何塞-10TB
-      - 美国-西雅图-15GB
+      - 美国-圣何塞-10TB RAKsmart-SV
+      - 美国-西雅图-15GB Cloady-xray
   - name: AI服务
     type: select
     proxies:
-      - 美国-圣何塞-10TB
-      - 美国-西雅图-15GB
+      - 美国-圣何塞-10TB RAKsmart-SV
+      - 美国-西雅图-15GB Cloady-xray
       - DIRECT
   - name: 流媒体
     type: select
     proxies:
-      - 美国-圣何塞-10TB
-      - 美国-西雅图-15GB
+      - 美国-圣何塞-10TB RAKsmart-SV
+      - 美国-西雅图-15GB Cloady-xray
       - DIRECT
   - name: 国内服务
     type: select
     proxies:
       - DIRECT
-      - 美国-圣何塞-10TB
-      - 美国-西雅图-15GB
+      - 美国-圣何塞-10TB RAKsmart-SV
+      - 美国-西雅图-15GB Cloady-xray
       - 自动选择
 rules:
   - DOMAIN-SUFFIX,weixin.qq.com,国内服务
