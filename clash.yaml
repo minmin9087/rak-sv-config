@@ -20,11 +20,88 @@ proxies:
       headers:
         Host: rak.zhoumeiwen.com
     udp: true
+  - name: Cloady-xray
+    type: vless
+    server: xray-t7ir3xbn-workspace-dw3xvd.cloady.io
+    port: 443
+    uuid: 6670bd18-1a4c-4445-b772-de0b55ef9d45
+    alterId: 0
+    cipher: auto
+    tls: true
+    servername: xray-t7ir3xbn-workspace-dw3xvd.cloady.io
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: xray-t7ir3xbn-workspace-dw3xvd.cloady.io
+    udp: true
 proxy-groups:
-  - name: PROXY
+  - name: 手动选择
     type: select
     proxies:
       - RAKsmart-SV
+      - Cloady-xray
+      - DIRECT
+      - 自动选择
+      - 故障转移
+  - name: 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - RAKsmart-SV
+      - Cloady-xray
+  - name: 故障转移
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    proxies:
+      - RAKsmart-SV
+      - Cloady-xray
+  - name: AI服务
+    type: select
+    proxies:
+      - RAKsmart-SV
+      - Cloady-xray
+      - DIRECT
+  - name: 流媒体
+    type: select
+    proxies:
+      - RAKsmart-SV
+      - Cloady-xray
       - DIRECT
 rules:
-  - MATCH,PROXY
+  - DOMAIN-SUFFIX,openai.com,AI服务
+  - DOMAIN-SUFFIX,chatgpt.com,AI服务
+  - DOMAIN-SUFFIX,oaistatic.com,AI服务
+  - DOMAIN-SUFFIX,oaiusercontent.com,AI服务
+  - DOMAIN-SUFFIX,claude.ai,AI服务
+  - DOMAIN-SUFFIX,anthropic.com,AI服务
+  - DOMAIN-SUFFIX,gemini.google.com,AI服务
+  - DOMAIN-SUFFIX,ai.google.dev,AI服务
+  - DOMAIN-SUFFIX,grok.com,AI服务
+  - DOMAIN-SUFFIX,x.ai,AI服务
+  - DOMAIN-SUFFIX,deepseek.com,AI服务
+  - DOMAIN-SUFFIX,perplexity.ai,AI服务
+  - DOMAIN-SUFFIX,poe.com,AI服务
+  - DOMAIN-SUFFIX,coze.com,AI服务
+  - DOMAIN-SUFFIX,midjourney.com,AI服务
+  - DOMAIN-SUFFIX,netflix.com,流媒体
+  - DOMAIN-SUFFIX,netflix.net,流媒体
+  - DOMAIN-SUFFIX,disneyplus.com,流媒体
+  - DOMAIN-SUFFIX,disney-plus.net,流媒体
+  - DOMAIN-SUFFIX,hulu.com,流媒体
+  - DOMAIN-SUFFIX,hbomax.com,流媒体
+  - DOMAIN-SUFFIX,max.com,流媒体
+  - DOMAIN-SUFFIX,youtube.com,流媒体
+  - DOMAIN-SUFFIX,googlevideo.com,流媒体
+  - DOMAIN-SUFFIX,ytimg.com,流媒体
+  - DOMAIN-SUFFIX,spotify.com,流媒体
+  - DOMAIN-SUFFIX,scdn.co,流媒体
+  - DOMAIN-SUFFIX,tidal.com,流媒体
+  - DOMAIN-SUFFIX,primevideo.com,流媒体
+  - DOMAIN-SUFFIX,amazonvideo.com,流媒体
+  - GEOIP,CN,DIRECT
+  - GEOSITE,CN,DIRECT
+  - MATCH,手动选择
