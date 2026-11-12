@@ -78,13 +78,6 @@ proxy-groups:
       - RAKsmart-SV
       - Cloady-xray
       - 自动选择
-  - name: GLOBAL
-    type: select
-    proxies:
-      - RAKsmart-SV
-      - Cloady-xray
-      - 自动选择
-      - DIRECT
 rules:
   - DOMAIN-SUFFIX,weixin.qq.com,国内服务
   - DOMAIN-SUFFIX,wx.qq.com,国内服务
