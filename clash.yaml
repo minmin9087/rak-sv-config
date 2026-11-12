@@ -1,0 +1,36 @@
+port: 7890
+socks-port: 7891
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 127.0.0.1:9090
+dns:
+  enable: true
+  ipv6: false
+  nameserver:
+    - 223.5.5.5
+    - 8.8.8.8
+proxies:
+  - name: RAKsmart-SV
+    type: vless
+    server: 104.233.202.6
+    port: 443
+    uuid: 0138d8d1-d114-4cc4-b84c-0ac97dbb74cb
+    alterId: 0
+    cipher: auto
+    tls: true
+    servername: www.microsoft.com
+    network: tcp
+    reality-opts:
+      public-key: NTxcY66cFccN1ZqtVIxdBWHK3CseuVTS4ysW7b3f-1k
+      short-id: 169793a14b65dd02
+    fingerprint: chrome
+    udp: true
+proxy-groups:
+  - name: PROXY
+    type: select
+    proxies:
+      - RAKsmart-SV
+      - DIRECT
+rules:
+  - MATCH,PROXY
