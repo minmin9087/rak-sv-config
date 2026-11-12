@@ -13,19 +13,18 @@ dns:
 proxies:
   - name: RAKsmart-SV
     type: vless
-    server: 104.233.202.6
+    server: rak.zhoumeiwen.com
     port: 443
-    uuid: 2f941039-0dec-4f99-b036-77968be1834a
+    uuid: 46785944-965c-4fd5-b84b-cee9aa56fc18
     alterId: 0
     cipher: auto
     tls: true
-    skip-cert-verify: true
-    servername: www.microsoft.com
+    servername: rak.zhoumeiwen.com
     network: ws
     ws-opts:
       path: /vless
       headers:
-        Host: www.microsoft.com
+        Host: rak.zhoumeiwen.com
     fingerprint: chrome
     udp: true
 proxy-groups:
