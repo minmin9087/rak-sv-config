@@ -42,34 +42,11 @@ proxy-groups:
       - 美国-圣何塞-10TB RAKsmart-SV
       - 美国-西雅图-15GB Cloady-xray
       - DIRECT
-      - 自动选择
-      - 故障转移
-  - name: 自动选择
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies:
-      - 美国-圣何塞-10TB RAKsmart-SV
-      - 美国-西雅图-15GB Cloady-xray
-  - name: 故障转移
-    type: fallback
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    proxies:
-      - 美国-圣何塞-10TB RAKsmart-SV
-      - 美国-西雅图-15GB Cloady-xray
   - name: AI服务
     type: select
     proxies:
-      - 美国-圣何塞-10TB RAKsmart-SV
       - 美国-西雅图-15GB Cloady-xray
-      - DIRECT
-  - name: 流媒体
-    type: select
-    proxies:
       - 美国-圣何塞-10TB RAKsmart-SV
-      - 美国-西雅图-15GB Cloady-xray
       - DIRECT
   - name: 国内服务
     type: select
@@ -77,7 +54,6 @@ proxy-groups:
       - DIRECT
       - 美国-圣何塞-10TB RAKsmart-SV
       - 美国-西雅图-15GB Cloady-xray
-      - 自动选择
 rules:
   - DOMAIN-SUFFIX,weixin.qq.com,国内服务
   - DOMAIN-SUFFIX,wx.qq.com,国内服务
@@ -132,21 +108,6 @@ rules:
   - DOMAIN-SUFFIX,poe.com,AI服务
   - DOMAIN-SUFFIX,coze.com,AI服务
   - DOMAIN-SUFFIX,midjourney.com,AI服务
-  - DOMAIN-SUFFIX,netflix.com,流媒体
-  - DOMAIN-SUFFIX,netflix.net,流媒体
-  - DOMAIN-SUFFIX,disneyplus.com,流媒体
-  - DOMAIN-SUFFIX,disney-plus.net,流媒体
-  - DOMAIN-SUFFIX,hulu.com,流媒体
-  - DOMAIN-SUFFIX,hbomax.com,流媒体
-  - DOMAIN-SUFFIX,max.com,流媒体
-  - DOMAIN-SUFFIX,youtube.com,流媒体
-  - DOMAIN-SUFFIX,googlevideo.com,流媒体
-  - DOMAIN-SUFFIX,ytimg.com,流媒体
-  - DOMAIN-SUFFIX,spotify.com,流媒体
-  - DOMAIN-SUFFIX,scdn.co,流媒体
-  - DOMAIN-SUFFIX,tidal.com,流媒体
-  - DOMAIN-SUFFIX,primevideo.com,流媒体
-  - DOMAIN-SUFFIX,amazonvideo.com,流媒体
   - GEOIP,CN,国内服务
   - GEOSITE,CN,国内服务
   - GEOIP,private,DIRECT
