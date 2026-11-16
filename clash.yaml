@@ -35,6 +35,7 @@ proxies:
   - name: 美国-西雅图 Cloady-xray 15GB
     type: vless
     server: 13.140.240.228
+    port: 443
     uuid: 6670bd18-1a4c-4445-b772-de0b55ef9d45
     alterId: 0
     cipher: auto
