@@ -8,14 +8,12 @@ dns:
   enable: true
   ipv6: false
   default-nameserver:
-    - 223.5.5.5
-    - 119.29.29.29
+    - 192.168.1.1
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
   nameserver:
-    - https://1.1.1.1/dns-query
-    - https://8.8.8.8/dns-query
+    - 192.168.1.1
 proxies:
   - name: 美国-圣何塞 RAKsmart-SV 10TB
     type: vless
