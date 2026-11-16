@@ -16,18 +16,7 @@ dns:
   nameserver:
     - https://1.1.1.1/dns-query
     - https://8.8.8.8/dns-query
-  fallback:
-    - https://doh.pub/dns-query
-    - https://dns.alidns.com/dns-query
-  fallback-filter:
-    geoip-code: CN
-    ipcidr:
-      - 240.0.0.0/4
-  nameserver-policy:
-    "geosite:cn":
-      - https://doh.pub/dns-query
-      - https://dns.alidns.com/dns-query
-proxies:
+  proxies:
   - name: 美国-圣何塞 RAKsmart-SV 10TB
     type: vless
     server: rak.zhoumeiwen.com
