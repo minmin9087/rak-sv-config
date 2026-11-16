@@ -16,7 +16,7 @@ dns:
   nameserver:
     - https://1.1.1.1/dns-query
     - https://8.8.8.8/dns-query
-  proxies:
+proxies:
   - name: 美国-圣何塞 RAKsmart-SV 10TB
     type: vless
     server: rak.zhoumeiwen.com
