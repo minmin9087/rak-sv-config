@@ -19,7 +19,7 @@ dns:
 proxies:
   - name: 美国-圣何塞 RAKsmart-SV 10TB
     type: vless
-    server: rak.zhoumeiwen.com
+    server: 104.233.202.6
     port: 443
     uuid: 46785944-965c-4fd5-b84b-cee9aa56fc18
     alterId: 0
@@ -34,8 +34,7 @@ proxies:
     udp: true
   - name: 美国-西雅图 Cloady-xray 15GB
     type: vless
-    server: xray-t7ir3xbn-workspace-dw3xvd.cloady.io
-    port: 443
+    server: 13.140.240.228
     uuid: 6670bd18-1a4c-4445-b772-de0b55ef9d45
     alterId: 0
     cipher: auto
