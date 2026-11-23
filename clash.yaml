@@ -63,6 +63,26 @@ proxies:
     server: 06gvsimm0c7lsv4todjjvqhcn3pmsac5ob6iotj7dnrteb7c9opvaeb3hg.crisp.bringyour.com
     port: 7155
     tls: true
+  - name: 美国-堪萨斯城 URnetwork-GoogleFiber
+    type: http
+    server: 06gvtkqeuisjggkhn4sl4ighird6d91pokkjbfm7skf92se3o021gd475k.crisp.bringyour.com
+    port: 7167
+    tls: true
+  - name: 英国-伦敦 URnetwork-Hyperoptic
+    type: http
+    server: 06gvtrmda4vqhd24grkd63mh3q46k4qfcsi2n703iulqifiqebp6dgu700.fireside.bringyour.com
+    port: 7149
+    tls: true
+  - name: 德国-柏林 URnetwork-O2
+    type: http
+    server: 06h02s5na6j2u0u9ktu70e7c2vf4kcjhdst6k9m1m3idphe2l84hpeg3eo.fireside.bringyour.com
+    port: 7167
+    tls: true
+  - name: 日本-札幌 URnetwork-So-net
+    type: http
+    server: 06h02uclcrt9u696mgn6j8ksc11it5o250aa5h2ia89tnr2mafgldll0ek.fireside.bringyour.com
+    port: 7155
+    tls: true
 proxy-groups:
   - name: 自动选择
     type: url-test
@@ -73,6 +93,10 @@ proxy-groups:
       - 美国-圣何塞 RAKsmart-SV 10TB
       - 美国-西雅图 Cloady-xray 15GB
       - 美国-迈阿密 URnetwork-AT&T
+      - 美国-堪萨斯城 URnetwork-GoogleFiber
+      - 英国-伦敦 URnetwork-Hyperoptic
+      - 德国-柏林 URnetwork-O2
+      - 日本-札幌 URnetwork-So-net
   - name: 自动
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -87,6 +111,10 @@ proxy-groups:
       - 美国-圣何塞 RAKsmart-SV 10TB
       - 美国-西雅图 Cloady-xray 15GB
       - 美国-迈阿密 URnetwork-AT&T
+      - 美国-堪萨斯城 URnetwork-GoogleFiber
+      - 英国-伦敦 URnetwork-Hyperoptic
+      - 德国-柏林 URnetwork-O2
+      - 日本-札幌 URnetwork-So-net
       - DIRECT
   - name: AI服务
     type: select
@@ -95,6 +123,10 @@ proxy-groups:
       - 美国-圣何塞 RAKsmart-SV 10TB
       - 美国-西雅图 Cloady-xray 15GB
       - 美国-迈阿密 URnetwork-AT&T
+      - 美国-堪萨斯城 URnetwork-GoogleFiber
+      - 英国-伦敦 URnetwork-Hyperoptic
+      - 德国-柏林 URnetwork-O2
+      - 日本-札幌 URnetwork-So-net
       - DIRECT
   - name: 国内服务
     type: select
