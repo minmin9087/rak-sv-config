@@ -58,11 +58,6 @@ proxies:
       headers:
         Host: xray-t7ir3xbn-workspace-dw3xvd.cloady.io
     udp: true
-  - name: 美国-迈阿密 URnetwork-AT&T
-    type: http
-    server: 06gvsimm0c7lsv4todjjvqhcn3pmsac5ob6iotj7dnrteb7c9opvaeb3hg.crisp.bringyour.com
-    port: 7155
-    tls: true
 proxy-groups:
   - name: 自动选择
     type: url-test
@@ -72,7 +67,6 @@ proxy-groups:
     proxies:
       - 美国-圣何塞 RAKsmart-SV 10TB
       - 美国-西雅图 Cloady-xray 15GB
-      - 美国-迈阿密 URnetwork-AT&T
   - name: 自动
     type: fallback
     url: http://www.gstatic.com/generate_204
@@ -86,7 +80,6 @@ proxy-groups:
       - 自动选择
       - 美国-圣何塞 RAKsmart-SV 10TB
       - 美国-西雅图 Cloady-xray 15GB
-      - 美国-迈阿密 URnetwork-AT&T
       - DIRECT
   - name: AI服务
     type: select
@@ -94,7 +87,6 @@ proxy-groups:
       - 自动
       - 美国-圣何塞 RAKsmart-SV 10TB
       - 美国-西雅图 Cloady-xray 15GB
-      - 美国-迈阿密 URnetwork-AT&T
       - DIRECT
   - name: 国内服务
     type: select
